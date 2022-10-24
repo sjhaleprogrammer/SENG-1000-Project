@@ -2,7 +2,7 @@
 
 simple python project 
 
-So far makes a list allows user to add items to the list and removed them.
+So far makes a list allows user to add items to the list and remove them.
 
 
 add TODOs here
