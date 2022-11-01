@@ -14,6 +14,17 @@ def remove():
         print(f"{x} is not in the list")
 
 
+#def pickup
+
+#def comsume 
+
+
+
+
+
+
+
+
 if __name__ == "__main__":
   
     while True:
