@@ -1,49 +1,51 @@
+import random
+import os
 
 
 class Game:
 
 
     def __init__(self):
-        self.list = []
-    
+        self.introscenes = ["You come across a Door"]
 
-    def add(self):
-        x = input()
-        self.list.append(x)
-        print(f"{x} has been added to the list")
+
+    def introscene(self):
+
+        os.system('cls')        
+        scene = self.list[random.randint(0,0)]
         
 
-    def remove(self):
-        x = input()
-        if x in list:
-            self.list.remove(x)
-        else:
-            print(f"{x} is not in the list")
+        print('')
+        print('')
+        print(f'            {scene}                ')
+        print('')
+        print('')                                   
+
 
 
     def run(self):
 
-        while True:
-            print('')
-            print('               Group 2 Project                  ')
-            print('                                                ')
-            print('------------------------------------------------')
-            print('')
-            print('               Enter 1 to Play                  ')
-            print('                                                ')
-            print('               Enter 0 to exit                  ')
-            print('')
-            print('------------------------------------------------')
-            print('')
+        
+        print('')
+        print('               Group 2 Project                  ')
+        print('                                                ')
+        print('------------------------------------------------')
+        print('')
+        print('               Enter 1 to Play                  ')
+        print('                                                ')
+        print('               Enter 0 to exit                  ')
+        print('')
+        print('------------------------------------------------')
+        print('')
 
-            option = int(input())
+        option = int(input())
 
-            if option == 1:
-                pass
+        if option == 1:
+            self.introscene()
 
-            if option == 0:
-                exit()
-            
+        if option == 0:
+            exit()
+        
         
             
 
