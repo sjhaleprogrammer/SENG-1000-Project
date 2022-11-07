@@ -24,30 +24,28 @@ class Game:
     def run(self):
 
         while True:
+            print('')
+            print('               Group 2 Project                  ')
+            print('                                                ')
             print('------------------------------------------------')
-            print('Input 0 to exit')
-            print('Input 1 to add a variable to the list')
-            print('Input 2 to remove a variable from the list ')
-            print('Input 3 to display the list')
+            print('')
+            print('               Enter 1 to Play                  ')
+            print('                                                ')
+            print('               Enter 0 to exit                  ')
+            print('')
             print('------------------------------------------------')
-            
+            print('')
 
             option = int(input())
-        
+
             if option == 1:
-                self.add()
-                print(self.list)
-                print('')
-            elif option == 2:
-                self.remove()
-                print(self.list)
-                print('')
-            elif option == 3:
-                print(self.list)
-                print('')
-            elif option == 0:
-                print(self.list)
+                pass
+
+            if option == 0:
                 exit()
+            
+        
+            
 
 
     
