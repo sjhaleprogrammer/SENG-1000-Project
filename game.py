@@ -6,20 +6,29 @@ class Game:
 
 
     def __init__(self):
-        self.introscenes = ["You come across a Door"]
+
+        self.inventory = ["raw meat","health potion"]
+
+        self.scenesTypeA = ["You come across a Door"]
+        self.scenesTypeB = ['']
+        self.scenesTypeC = ['']
 
 
-    def introscene(self):
+
+    def displayscene(self):
 
         os.system('cls')        
-        scene = self.list[random.randint(0,0)]
+        scene = self.scenesTypeA[random.randint(0,0)]
         
 
         print('')
         print('')
         print(f'            {scene}                ')
         print('')
-        print('')                                   
+        print('') 
+        print('')
+        print('')         
+        print(f'Your inventory: {self.inventory}')                         
 
 
 
@@ -41,7 +50,7 @@ class Game:
         option = int(input())
 
         if option == 1:
-            self.introscene()
+            self.displayscene()
 
         if option == 0:
             exit()
