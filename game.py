@@ -21,7 +21,7 @@ class Game:
             print(f"{x} is not in the list")
 
 
-    def displaymenu(self):
+    def run(self):
 
         while True:
             print('------------------------------------------------')
