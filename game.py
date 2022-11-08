@@ -1,6 +1,8 @@
 import random
 import os
+import time
 from player import Player
+from monsters import Monsters
 
 
 class Game:
@@ -8,27 +10,37 @@ class Game:
 
     def __init__(self):
 
-        self.scenes = []
+        self.player = Player()
+        self.scene = Monsters().generatemonster()
 
 
 
     def displayscene(self):
 
-        os.system('cls')        
-        scene = self.scenesTypeA[random.randint(0,0)]
+        while self.player.health != 0:
+
+            os.system('cls')        
         
     
-        print('')
-        print('')
-        print('')
-        print('')
-        print('')
-        print(f'            {scene}                ')
-        print('')
-        print('')
-        print('')
-        print('')
-        print('')
+            print('')
+            print('')
+            print('')
+            print('')
+            print('')
+            print(f'            {self.scene}                ')
+            print('')
+            print('')
+            print('')
+            print('')
+            print(f' Health:{self.player.health}       ')
+            print('')
+
+
+            print("1 to Fight")
+            print("2 to Run")
+            
+
+            time.sleep(2.0)
 
          
                        
