@@ -2,7 +2,7 @@ import random
 import os
 import time
 from player import Player
-from monsters import Monsters
+from monster import Monster
 
 
 class Game:
@@ -11,11 +11,13 @@ class Game:
     def __init__(self):
 
         self.player = Player()
-        self.scene = Monsters().generatemonster()
+        self.monster = Monster()
 
 
 
     def displayscene(self):
+
+        monster = self.monster.generatemonster()
 
         while self.player.health != 0:
 
@@ -24,15 +26,15 @@ class Game:
     
             print('')
             print('')
+            print(f'                 Health:{self.monster.health}')
+            print('')
+            print('')
+            print(f'         {monster}                           ')
             print('')
             print('')
             print('')
-            print(f'            {self.scene}                ')
             print('')
-            print('')
-            print('')
-            print('')
-            print(f' Health:{self.player.health}       ')
+            print(f' Health:{self.player.health}                 ')
             print('')
 
 

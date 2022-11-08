@@ -1,10 +1,9 @@
 import random
 
-class Monsters:
+class Monster:
 
     def __init__(self):
-
-        pass
+        self.health = 100
 
 
     def generatemonster(self):
