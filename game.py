@@ -8,9 +8,7 @@ class Game:
 
     def __init__(self):
 
-        self.scenesTypeA = ["You come across a Door"]
-        self.scenesTypeB = ['']
-        self.scenesTypeC = ['']
+        self.scenes = []
 
 
 
@@ -19,14 +17,20 @@ class Game:
         os.system('cls')        
         scene = self.scenesTypeA[random.randint(0,0)]
         
-
+    
+        print('')
+        print('')
+        print('')
         print('')
         print('')
         print(f'            {scene}                ')
         print('')
-        print('') 
         print('')
-        print('')         
+        print('')
+        print('')
+        print('')
+
+         
                        
 
 
