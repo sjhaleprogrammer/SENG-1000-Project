@@ -45,9 +45,6 @@ class Game:
             time.sleep(2.0)
 
          
-                       
-
-
 
     def run(self):
 
@@ -64,14 +61,20 @@ class Game:
         print('------------------------------------------------')
         print('')
 
-        option = int(input())
+      
+        try:
+            option = int(input())
 
-        if option == 1:
-            player = Player()
-            self.displayscene()
+            if option == 1:
+                player = Player()
+                self.displayscene()
 
-        if option == 0:
-            exit()
+            if option == 0:
+                exit()
+
+        except:
+            print("wrong that is not a 1 or 0")
+            self.run()
         
         
             
