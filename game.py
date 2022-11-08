@@ -1,13 +1,12 @@
 import random
 import os
+from player import Player
 
 
 class Game:
 
 
     def __init__(self):
-
-        self.inventory = ["raw meat","health potion"]
 
         self.scenesTypeA = ["You come across a Door"]
         self.scenesTypeB = ['']
@@ -28,7 +27,7 @@ class Game:
         print('') 
         print('')
         print('')         
-        print(f'Your inventory: {self.inventory}')                         
+                       
 
 
 
@@ -50,6 +49,7 @@ class Game:
         option = int(input())
 
         if option == 1:
+            player = Player()
             self.displayscene()
 
         if option == 0:

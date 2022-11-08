@@ -2,7 +2,7 @@
 
 simple python project 
 
-So far makes a list allows user to add items to the list and remove them.
+RPG game using random elements 
 
 
 add TODOs here
