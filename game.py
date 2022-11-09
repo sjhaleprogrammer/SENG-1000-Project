@@ -43,6 +43,23 @@ class Game:
 
             time.sleep(2.0)
 
+        else:
+
+            print('')
+            print('')
+            print('')
+            print('')
+            print('')
+            print(f'         You are dead                          ')
+            print('')
+            print('')
+            print('')
+            print('')
+            print('')
+            print('')
+
+
+
          
 
     def run(self):
@@ -69,6 +86,9 @@ class Game:
 
             if option == 0:
                 exit()
+            else:
+                print("wrong that is not a 1 or 0")
+                self.run()
 
         except:
             print("wrong that is not a 1 or 0")
