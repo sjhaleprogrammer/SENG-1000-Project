@@ -1,4 +1,3 @@
-import random
 import os
 import time
 from player import Player
@@ -66,7 +65,6 @@ class Game:
             option = int(input())
 
             if option == 1:
-                player = Player()
                 self.displayscene()
 
             if option == 0:
