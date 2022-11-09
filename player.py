@@ -7,12 +7,12 @@ class Player:
         self.damage = 0
         self.resistance = 0
 
-
+    #adds a item (string) to the inventory(list)
     def addtoinventory(self,newitem):
 
         self.addtoinventory.append(newitem)
 
-
+    #change all the values of a player at once
     def defBaseValues(self, health, damage, resistance):
 
 

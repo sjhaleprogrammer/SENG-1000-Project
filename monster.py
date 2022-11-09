@@ -3,11 +3,20 @@ import random
 class Monster:
 
     def __init__(self):
+        
         self.health = 100
+        self.damage = 0
+        self.resistance = 0
+
+        self.currentmonster = ""
+        self.generatenewmonster()
+        #when creating a new monster object a monster will be created by default 
 
 
 
-    def generatemonster(self):
+    #creates random monster idea and returns a string
+    #TODO add acsii art from a acsii class or something
+    def generatenewmonster(self):
         list = ['Goblin','Bat','Spider','Wolf']
         type = ['Big','Giant','Demon']
 
@@ -20,4 +29,4 @@ class Monster:
 
 
 
-        return output
+        self.currentmonster = output

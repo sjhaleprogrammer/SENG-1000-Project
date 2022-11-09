@@ -2,7 +2,7 @@ import os
 import time
 from player import Player
 from monster import Monster
-
+from scene import Scene
 
 class Game:
 
@@ -11,52 +11,44 @@ class Game:
 
         self.player = Player()
         self.monster = Monster()
+        self.scene = Scene()
+        
 
 
-
-    def displayscene(self):
-
-        monster = self.monster.generatemonster()
+    # uses the player, monster and scene class to create battle 
+    def battle(self):
 
         while self.player.health != 0:
-
+            
+            # clears the screen
             os.system('cls')        
         
-    
-            print('')
-            print('')
-            print(f'                 Health:{self.monster.health}')
-            print('')
-            print('')
-            print(f'         {monster}                           ')
-            print('')
-            print('')
-            print('')
-            print('')
-            print(f' Health:{self.player.health}                 ')
-            print('')
-
-
+            self.scene.displaybattle(self.monster,self.player)
+            
+            #to be changed 
             print("1 to Fight")
             print("2 to Run")
             
 
             time.sleep(2.0)
 
+            try:
+                option = int(input())
+            except:
+                pass
+
+            if option == 1:
+                #TODO create battle function in player.py
+                pass
+
+            if option == 0:
+                #TODO create battle function in player.py
+                pass
+        
+
         else:
 
-            print('')
-            print('')
-            print('')
-            print('')
-            print('')
-            print(f'         You are dead                          ')
-            print('')
-            print('')
-            print('')
-            print('')
-            print('')
-            print('')
+           self.scene.displaydeath()
 
 
 
@@ -64,35 +56,21 @@ class Game:
 
     def run(self):
 
-        
-        print('')
-        print('               Group 2 Project                  ')
-        print('                                                ')
-        print('------------------------------------------------')
-        print('')
-        print('               Enter 1 to Play                  ')
-        print('                                                ')
-        print('               Enter 0 to exit                  ')
-        print('')
-        print('------------------------------------------------')
-        print('')
+        #displays menu
+        self.scene.displaymenu()
 
       
         try:
             option = int(input())
-
-            if option == 1:
-                self.displayscene()
-
-            if option == 0:
-                exit()
-            else:
-                print("wrong that is not a 1 or 0")
-                self.run()
-
         except:
             print("wrong that is not a 1 or 0")
             self.run()
+
+        if option == 1:
+            self.battle()
+
+        if option == 0:
+            exit()
         
         
             
