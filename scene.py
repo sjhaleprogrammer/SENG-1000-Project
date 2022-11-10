@@ -1,11 +1,6 @@
 class Scene:
 
 
-    def __init__(self):
-
-        pass
-
-
     #displays the menu TO BE CHANGED    
     def displaymenu(self):
         print('')
