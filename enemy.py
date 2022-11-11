@@ -23,8 +23,7 @@ class Enemy:
         enemy = random.choice(list)
 
         output = random.choice(type) + " " + enemy
-        if enemy == 'Spider':
-            pass
+        
 
 
 

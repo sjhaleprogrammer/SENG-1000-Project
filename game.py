@@ -26,8 +26,8 @@ class Game:
             self.scene.displaybattle(self.enemy,self.player)
             
             #to be changed 
-            print("1 to Fight")
-            print("2 to Run")
+            print("1) Punch")
+            
             
             try:
                 option = int(input())
@@ -35,15 +35,10 @@ class Game:
                 pass
 
             if option == 1:
-                #TODO create battle function in player.py
-                pass
-
-            if option == 0:
-                #TODO create battle function in player.py
-                pass
+                self.player.punch(self.enemy)
 
 
-            time.sleep(2.0)
+            time.sleep(1.2)
         
 
         else:
