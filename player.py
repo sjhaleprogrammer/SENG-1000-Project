@@ -12,6 +12,11 @@ class Player:
 
         self.addtoinventory.append(newitem)
 
+    #fights the emeny
+    def fight(emeny):
+        emeny.health = 0
+
+        
     #change all the values of a player at once
     def defBaseValues(self, health, damage, resistance):
 

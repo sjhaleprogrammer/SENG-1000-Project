@@ -1,7 +1,7 @@
 import os
 import time
 from player import Player
-from monster import Monster
+from emeny import Emeny
 from scene import Scene
 
 class Game:
@@ -10,12 +10,12 @@ class Game:
     def __init__(self):
 
         self.player = Player()
-        self.monster = Monster()
+        self.emeny = Emeny()
         self.scene = Scene()
         
 
 
-    # uses the player, monster and scene class to create battle 
+    # uses the player, emeny and scene class to create battle 
     def battle(self):
 
         while self.player.health != 0:
@@ -23,7 +23,7 @@ class Game:
             # clears the screen
             os.system('cls')        
         
-            self.scene.displaybattle(self.monster,self.player)
+            self.scene.displaybattle(self.emeny,self.player)
             
             #to be changed 
             print("1 to Fight")
