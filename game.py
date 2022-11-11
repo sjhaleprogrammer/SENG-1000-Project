@@ -1,7 +1,7 @@
 import os
 import time
 from player import Player
-from emeny import Emeny
+from enemy import Enemy
 from scene import Scene
 
 class Game:
@@ -10,12 +10,12 @@ class Game:
     def __init__(self):
 
         self.player = Player()
-        self.emeny = Emeny()
+        self.enemy = Enemy()
         self.scene = Scene()
         
 
 
-    # uses the player, emeny and scene class to create battle 
+    # uses the player, enemy and scene class to create battle 
     def battle(self):
 
         while self.player.health != 0:
@@ -23,15 +23,12 @@ class Game:
             # clears the screen
             os.system('cls')        
         
-            self.scene.displaybattle(self.emeny,self.player)
+            self.scene.displaybattle(self.enemy,self.player)
             
             #to be changed 
             print("1 to Fight")
             print("2 to Run")
             
-
-            time.sleep(2.0)
-
             try:
                 option = int(input())
             except:
@@ -44,6 +41,9 @@ class Game:
             if option == 0:
                 #TODO create battle function in player.py
                 pass
+
+
+            time.sleep(2.0)
         
 
         else:

@@ -19,13 +19,13 @@ class Scene:
 
 
     #displays the battle screen TO BE CHANGED
-    def displaybattle(self, emeny, player):
+    def displaybattle(self, enemy, player):
         print('')
         print('')
-        print(f'                 Health:{emeny.health}')
+        print(f'                 Health:{enemy.health}')
         print('')
         print('')
-        print(f'         {emeny.currentemeny}       ')
+        print(f'         {enemy.currentenemy}       ')
         print('')
         print('')
         print('')

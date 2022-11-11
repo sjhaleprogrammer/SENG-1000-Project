@@ -1,3 +1,5 @@
+import random
+
 class Player:
 
     def __init__(self):
@@ -12,9 +14,9 @@ class Player:
 
         self.addtoinventory.append(newitem)
 
-    #fights the emeny
-    def fight(emeny):
-        emeny.health = 0
+    #fights the enemy
+    def fight(self, enemy):
+        pass
 
         
     #change all the values of a player at once
