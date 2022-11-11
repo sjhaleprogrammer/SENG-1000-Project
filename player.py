@@ -17,7 +17,7 @@ class Player:
 
     #punch emeny
     def punch(self, enemy):
-        enemy.health = enemy.health - 20
+        enemy.health -= 20
 
 
   

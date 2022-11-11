@@ -28,3 +28,9 @@ class Enemy:
 
 
         self.currentenemy = output
+
+
+
+    def attack(self,player):
+        player.health -= 20
+

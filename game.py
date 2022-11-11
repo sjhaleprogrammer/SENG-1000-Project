@@ -17,33 +17,38 @@ class Game:
 
     # uses the player, enemy and scene class to create battle 
     def battle(self):
-
+        enemyturn = False
+        
         while self.player.health != 0:
-            
+
             # clears the screen
             os.system('cls')        
         
             self.scene.displaybattle(self.enemy,self.player)
-            
-            #to be changed 
-            print("1) Punch")
-            
-            
-            try:
-                option = int(input())
-            except:
-                pass
 
-            if option == 1:
-                self.player.punch(self.enemy)
+            if enemyturn == False:
+                print("1) Punch")
+            
+                try:
+                    option = int(input())
+                except:
+                    pass
 
+                if option == 1:
+                    self.player.punch(self.enemy)
+                    enemyturn = True
 
-            time.sleep(1.2)
+            else:
+                print("Enemy is now attacking !")
+                self.enemy.attack(self.player)
+                enemyturn = False
+
+            time.sleep(1.5)
         
-
         else:
+            os.system('cls')  
 
-           self.scene.displaydeath()
+            self.scene.displaydeath()
 
 
 
