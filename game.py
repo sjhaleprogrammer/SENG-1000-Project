@@ -39,7 +39,7 @@ class Game:
                     enemyturn = True
 
             else:
-                print("Enemy is now attacking !")
+                print(f"{self.enemy.currentenemy} is now attacking !")
                 self.enemy.attack(self.player)
                 enemyturn = False
 
@@ -54,23 +54,18 @@ class Game:
 
          
 
-    def run(self):
+    def menu(self):
 
         #displays menu
         self.scene.displaymenu()
-
-      
         try:
             option = int(input())
         except:
             print("wrong that is not a 1 or 0")
-            self.run()
+            self.menu()
 
-        if option == 1:
-            self.battle()
-
-        if option == 0:
-            exit()
+        return option
+    
         
         
             

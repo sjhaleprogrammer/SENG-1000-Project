@@ -8,9 +8,9 @@ class Scene:
         print('                                                ')
         print('------------------------------------------------')
         print('')
-        print('               Enter 1 to Play                  ')
+        print('                  1) Play                          ')
         print('                                                ')
-        print('               Enter 0 to exit                  ')
+        print('                  0) Quit                          ')
         print('')
         print('------------------------------------------------')
         print('')
@@ -50,3 +50,6 @@ class Scene:
         print('')
         print('')
         print('')
+
+
+

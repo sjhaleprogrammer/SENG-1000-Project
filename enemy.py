@@ -18,7 +18,7 @@ class Enemy:
     #TODO add acsii art from a acsii class or something
     def generateNewEnemy(self):
         list = ['Goblin','Bat','Spider','Wolf']
-        type = ['Big','Giant','Demon']
+        type = ['Big','Giant','Small']
 
         enemy = random.choice(list)
 
@@ -32,5 +32,5 @@ class Enemy:
 
 
     def attack(self,player):
-        player.health -= 20
+        player.health -= random.randint(14,18)
 
