@@ -17,12 +17,18 @@ class Game:
 
     # uses the player, enemy and scene class to create battle 
     def battle(self):
+
         enemyturn = False
-        
+
         while self.player.health != 0:
 
+            if (self.enemy.health <= 0):
+                os.system('clear')
+                self.scene.displaywin()
+                break
+
             # clears the screen
-            os.system('cls')        
+            os.system('clear')        
         
             self.scene.displaybattle(self.enemy,self.player)
 
@@ -35,21 +41,24 @@ class Game:
                     pass
 
                 if option == 1:
+                    os.system('clear')
+                    self.scene.displaybattle(self.enemy,self.player)
+                    print("Player is now attacking...")
+
                     self.player.punch(self.enemy)
                     enemyturn = True
 
             else:
-                print(f"{self.enemy.currentenemy} is now attacking !")
+                print(f"{self.enemy.currentenemy} is now attacking...")
                 self.enemy.attack(self.player)
                 enemyturn = False
 
-            time.sleep(1.5)
+            time.sleep(2.5)
         
         else:
-            os.system('cls')  
-
+            os.system('clear')
             self.scene.displaydeath()
-
+            
 
 
          

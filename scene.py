@@ -17,7 +17,6 @@ class Scene:
 
 
 
-
     #displays the battle screen TO BE CHANGED
     def displaybattle(self, enemy, player):
         print('')
@@ -50,6 +49,27 @@ class Scene:
         print('')
         print('')
         print('')
+
+    
+
+    #displays the death screen TO BE CHANGED
+    def displaywin(self):
+        print('')
+        print('')
+        print('')
+        print('')
+        print('')
+        print(f'          You won !                        ')
+        print('')
+        print('')
+        print('')
+        print('')
+        print('')
+        print('')
+    
+
+
+
 
 
 

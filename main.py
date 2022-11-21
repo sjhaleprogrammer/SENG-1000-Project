@@ -8,6 +8,8 @@ if __name__ == "__main__":
     if option == 1:
         game.battle()
 
+
+    
     if option == 0:
         exit()
 

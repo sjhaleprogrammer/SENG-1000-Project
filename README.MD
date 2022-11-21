@@ -2,7 +2,6 @@
 
 simple python project 
 
-RPG game using random elements 
+Turn based RPG game using random elements 
 
 
-add TODOs here
