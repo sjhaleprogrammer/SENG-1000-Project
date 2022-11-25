@@ -1,3 +1,5 @@
+from ascii import Ascii
+
 class Scene:
 
 
@@ -20,16 +22,18 @@ class Scene:
     #displays the battle screen TO BE CHANGED
     def displaybattle(self, enemy, player):
         print('')
-        print('')
-        print(f'                 Health:{enemy.health}')
-        print('')
-        print('')
-        print(f'         {enemy.currentenemy}       ')
+        print(f'                 HP:{enemy.health}')
         print('')
         print('')
+        print(f'      {enemy.currentenemy}       ')
+        print('')
+        if ("Spider" in enemy.currentenemy):
+            Ascii.Spider()
         print('')
         print('')
-        print(f' Health:{player.health}                 ')
+        print('')
+        print('')
+        print(f' HP:{player.health}                 ')
         print('')
 
 
