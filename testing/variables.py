@@ -30,4 +30,45 @@ def defBaseValues(failsafe, health, damage, resistance):
             resistance = 80
         baseValues.append(resistance)
         return baseValues
-
+def defModifier():
+    #healthMod determines how much the health is increased or decreased
+    #damageMod determines how much the damage is increased or decreased
+    #resistanceMod determines how much the resistance is increased or decreased
+    #lifestealMod determines how much the entity is healed per damage point dealt (negative value heals the opposing entity instead of the attacking entity)
+    #bleedMod determines how much damage the entity takes over time per round (negative value heals the attacked entity per round instead of harming it)
+    #healMod determines how much health is restored upon consuming the item
+    #healingMod determines the magnitude of healing, positive values increase the magnitude while negative decrease the magnitude
+    valueIndex = []
+    placeholder = int(input('What is the passive magnitude of health?'))
+    valueIndex.append(placeholder)
+    placeholder = int(input('What is the passive magnitude of damage?'))
+    valueIndex.append(placeholder)
+    placeholder = int(input('What is the passive integer of resistance?'))
+    valueIndex.append(placeholder)
+    placeholder = int(input('What is the active percentage of lifesteal?'))
+    valueIndex.append(placeholder)
+    placeholder = int(input('What is the active amount of bleed?'))
+    valueIndex.append(placeholder)
+    placeholder = int(input('What is the active amount of health restored?'))
+    valueIndex.append(placeholder)
+    placeholder = int(input('What is the active magnitude of healing dealt?'))
+    valueIndex.append(placeholder)
+    return valueIndex
+testValue1 = defModifier()
+testValue2 = defModifier()
+def modifierAdding(variable1, variable2):
+    totalHealthMod = variable1[0]+variable2[0]
+    print('The maximum value of healthMod is', totalHealthMod)
+    totalDamageMod = variable1[1]+variable2[1]
+    print('The maximum value of damageMod is', totalDamageMod)
+    totalResistanceMod = variable1[2]+variable2[2]
+    print('The maximum value of resistanceMod is', totalResistanceMod)
+    totalLifeStealMod = variable1[3]+variable2[3]
+    print('The maximum value of lifestealMod is', totalLifeStealMod)
+    totalBleedMod = variable1[4]+variable2[4]
+    print('The maximum value of bleedMod is', totalBleedMod)
+    totalHealMod = variable1[5]+variable2[5]
+    print('The maximum value of healMod is', totalHealMod)
+    totalHealingMod = variable1[6]+variable2[6]
+    print('The maximum value of healingMod is', totalHealingMod)
+print(modifierAdding(testValue1,testValue2))
