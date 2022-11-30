@@ -32,5 +32,12 @@ class Enemy:
 
 
     def attack(self,player):
-        player.health -= random.randint(14,18)
+        
+        print(f"{self.currentenemy} is now attacking...")
+        damage_dealt =  random.randint(13,18)
 
+        player.health -= damage_dealt
+
+        
+
+        

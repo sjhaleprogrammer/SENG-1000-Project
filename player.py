@@ -17,6 +17,7 @@ class Player:
 
     #punch emeny
     def punch(self, enemy):
+        print("Player is now attacking...")
         enemy.health -= random.randint(16,20)
 
 

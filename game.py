@@ -1,5 +1,6 @@
 import os
 import time
+import random
 from player import Player
 from enemy import Enemy
 from scene import Scene
@@ -42,14 +43,20 @@ class Game:
 
                 if option == 1:
                     os.system('clear')
-                    self.scene.displaybattle(self.enemy,self.player)
-                    print("Player is now attacking...")
 
-                    self.player.punch(self.enemy)
-                    enemyturn = True
+                    self.scene.displaybattle(self.enemy,self.player)
+                    
+                    #20 percent chance for the emeny to evade attack
+                    evadechance = random.randint(0,9)
+                    if evadechance == 0 or evadechance == 1:
+                        print(f'{self.enemy.currentenemy} evaded the attack !')
+                        time.sleep(1)
+                        enemyturn = True
+                    else:
+                        self.player.punch(self.enemy)
+                        enemyturn = True
 
             else:
-                print(f"{self.enemy.currentenemy} is now attacking...")
                 self.enemy.attack(self.player)
                 enemyturn = False
 
