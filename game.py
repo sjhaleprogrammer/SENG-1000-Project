@@ -46,7 +46,7 @@ class Game:
 
                     self.scene.displaybattle(self.enemy,self.player)
                     
-                    #20 percent chance for the emeny to evade attack
+                    #20 percent chance for the enemy to evade attack
                     evadechance = random.randint(0,9)
                     if evadechance == 0 or evadechance == 1:
                         print(f'{self.enemy.currentenemy} evaded the attack !')
