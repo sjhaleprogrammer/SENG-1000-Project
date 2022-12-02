@@ -26,7 +26,12 @@ class Game:
             if (self.enemy.health <= 0):
                 os.system('clear')
                 self.scene.displaywin()
-                break
+                return "win"
+
+            if (self.player.health <= 0):
+                os.system('clear')
+                self.scene.displaydeath()
+                return "lose"
 
             # clears the screen
             os.system('clear')        
@@ -50,7 +55,6 @@ class Game:
                     evadechance = random.randint(0,9)
                     if evadechance == 0 or evadechance == 1:
                         print(f'{self.enemy.currentenemy} evaded the attack !')
-                        time.sleep(1)
                         enemyturn = True
                     else:
                         self.player.punch(self.enemy)
@@ -62,9 +66,9 @@ class Game:
 
             time.sleep(2.5)
         
-        else:
-            os.system('clear')
-            self.scene.displaydeath()
+       
+            
+            
             
 
 
