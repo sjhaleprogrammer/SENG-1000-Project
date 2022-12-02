@@ -21,17 +21,12 @@ class Game:
 
         enemyturn = False
 
-        while self.player.health != 0:
+        while self.player.health >= 0:
 
             if (self.enemy.health <= 0):
                 os.system('clear')
                 self.scene.displaywin()
                 return "win"
-
-            if (self.player.health <= 0):
-                os.system('clear')
-                self.scene.displaydeath()
-                return "lose"
 
             # clears the screen
             os.system('clear')        
@@ -65,7 +60,12 @@ class Game:
                 enemyturn = False
 
             time.sleep(2.5)
-        
+
+        else:
+            os.system('clear')
+            self.scene.displaydeath()
+            return "lose"
+
        
             
             
