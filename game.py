@@ -27,6 +27,7 @@ class Game:
 
             if (self.enemy.health <= 0):
                 os.system('clear')
+                self.menu()
                 self.scene.displaywin()
                 return "win"
 
@@ -70,7 +71,11 @@ class Game:
                         for count,item in enumerate(self.player.inventory, start=1):
                             print(str(count)+")", item)
 
+                        print("0) Back")
                         option = int(input())
+                        if option == 0:
+                            continue
+                    
                         self.player.useItem(self.enemy,self.player.inventory[option-1])
                         enemyturn = True
                     else:
@@ -90,7 +95,9 @@ class Game:
 
         else:
             os.system('clear')
+            self.player.inventory.clear()
             self.scene.displaydeath()
+            self.menu()
             return "lose"
 
        

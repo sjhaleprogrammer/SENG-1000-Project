@@ -18,9 +18,12 @@ class Player:
 
     #uses first item in inventory
     def useItem(self, enemy, item):
+        
         if (item.ToEnemy == True):
+            print(f"Used {item.name} on the enemy!")
             enemy.health -= int(item.damage)
         else:
+            print(f"Used {item.name}")
             self.health += int(item.damage)
         
         self.inventory.remove(item)
