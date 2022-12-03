@@ -26,7 +26,7 @@ class Game:
         while self.player.health >= 0:
 
             if (self.enemy.health <= 0):
-                os.system('cls')
+                os.system('clear')
                 self.scene.displaywin()
                 return "win"
 
@@ -47,7 +47,7 @@ class Game:
                 
 
                 if option == 1:
-                    os.system('cls')
+                    os.system('clear')
 
                     self.scene.displaybattle(self.enemy,self.player)
                 
@@ -63,7 +63,7 @@ class Game:
                 if option == 2:
 
                     if len(self.player.inventory) != 0:
-                        os.system('cls')
+                        os.system('clear')
 
                         self.scene.displaybattle(self.enemy,self.player)
 
@@ -74,7 +74,7 @@ class Game:
                         self.player.useItem(self.enemy,self.player.inventory[option-1])
                         enemyturn = True
                     else:
-                        os.system('cls')
+                        os.system('clear')
                         self.scene.displaybattle(self.enemy,self.player)
 
                         print("Your inventory is empty...")
@@ -89,7 +89,7 @@ class Game:
             time.sleep(2.5)
 
         else:
-            os.system('cls')
+            os.system('clear')
             self.scene.displaydeath()
             return "lose"
 
@@ -108,7 +108,7 @@ class Game:
 
         self.player.inventory.append(item)
 
-        os.system('cls')
+        os.system('clear')
         self.scene.displayfind(item)
         time.sleep(2.5)
         
@@ -118,7 +118,7 @@ class Game:
 
     def menu(self):
 
-        os.system('cls')
+        os.system('clear')
         #displays menu
         self.scene.displaymenu()
 
