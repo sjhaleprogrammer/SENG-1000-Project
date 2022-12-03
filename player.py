@@ -9,20 +9,23 @@ class Player:
         self.damage = 0
         self.resistance = 0
 
-    #adds a item (string) to the inventory(list)
-    def addtoinventory(self,newitem):
-        self.addtoinventory.append(newitem)
-
-
-
+   
     #punch emeny
     def punch(self, enemy):
         print("Player is now attacking...")
         enemy.health -= random.randint(16,20)
 
 
-  
+    #uses first item in inventory
+    def useItem(self, enemy, item):
+        if (item.ToEnemy == True):
+            enemy.health -= int(item.damage)
+        else:
+            self.health += int(item.damage)
         
+        self.inventory.remove(item)
+        
+
     #change all the values of a player at once
     def defBaseValues(self, health, damage, resistance):
         self.health = health

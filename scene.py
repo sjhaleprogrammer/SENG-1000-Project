@@ -10,11 +10,13 @@ class Scene:
         print('                                                ')
         print('------------------------------------------------')
         print('')
-        print('                  1) Play                          ')
-        print('                                                ')
-        print('                  0) Quit                          ')
+        print('                  1) Battle                      ')
         print('')
-        print('------------------------------------------------')
+        print('                  2) Find                        ')
+        print('                                                 ')
+        print('                  0) Quit                        ')
+        print('')
+        print('-------------------------------------------------')
         print('')
 
 
@@ -24,14 +26,12 @@ class Scene:
         print('')
         print(f'                 HP:{enemy.health}')
         print('')
-        print('')
         print(f'      {enemy.currentenemy}       ')
         print('')
         if ("Spider" in enemy.currentenemy):
             Ascii.Spider()
-        print('')
-        print('')
-        print('')
+        elif("Skeleton" in enemy.currentenemy):
+            Ascii.Skeleton()
         print('')
         print(f' HP:{player.health}                 ')
         print('')
@@ -72,8 +72,18 @@ class Scene:
         print('')
     
 
-
-
-
-
+   
+    def displayfind(self,item):
+        print('')
+        print('')
+        print('')
+        print('')
+        print('')
+        print(f'        "You have found {item}"          ')
+        print('')
+        print('')
+        print('')
+        print('')
+        print('')
+        print('')
 

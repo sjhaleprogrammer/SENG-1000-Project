@@ -9,6 +9,23 @@ class Ascii:
         print('        _//"\\_  ')
         print('         /   \   ')
 
+    def Skeleton():
+      print("            .-.   ")
+      print("           (o.o)  ")
+      print("            |=|   ")
+      print("           __|__   ")
+      print('         //.=|=.\\\  ')
+      print('        // .=|=. \\\ ')
+      print('        \\\ .=|=. //  ')
+      print('         \\\(_=_)//   ')
+      print("          (:| |:)    ")
+      print("           || ||    ")
+      print("           () ()    ")
+      print("           || ||    ")
+      print("           || ||     ")
+      print("          ==' '==    ")
+
+
 
     def Wolf():
             pass
