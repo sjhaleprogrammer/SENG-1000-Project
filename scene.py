@@ -1,6 +1,22 @@
 from ascii import Ascii
+import sys
+import os
+
+
 
 class Scene:
+
+    def clearScreen(self):
+        if sys.platform.startswith("linux"):  
+            return os.system("Clear")
+
+        if sys.platform == "darwin":
+            return os.system("Clear")
+
+        if sys.platform == "win32":
+            return os.system("cls")
+
+
 
 
     #displays the menu TO BE CHANGED    
@@ -34,6 +50,10 @@ class Scene:
             Ascii.Skeleton()
         elif("Goblin" in enemy.currentenemy):
             Ascii.Goblin()
+        elif ("Wolf" in enemy.currentenemy):
+            Ascii.Wolf()
+        elif ("Bat" in enemy.currentenemy):
+            Ascii.Bat()
         print('')
         print(f' HP:{player.health}                 ')
         print('')

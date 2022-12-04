@@ -1,4 +1,3 @@
-import os
 import time
 import random
 from player import Player
@@ -26,13 +25,13 @@ class Game:
         while self.player.health >= 0:
 
             if (self.enemy.health <= 0):
-                os.system('clear')
+                self.scene.clearScreen()
                 self.menu()
                 self.scene.displaywin()
                 return "win"
 
             # clears the screen
-            os.system('clear')        
+            self.scene.clearScreen()       
         
             self.scene.displaybattle(self.enemy,self.player)
 
@@ -48,7 +47,7 @@ class Game:
                 
 
                 if option == 1:
-                    os.system('clear')
+                    self.scene.clearScreen()
 
                     self.scene.displaybattle(self.enemy,self.player)
                 
@@ -64,7 +63,7 @@ class Game:
                 if option == 2:
 
                     if len(self.player.inventory) != 0:
-                        os.system('clear')
+                        self.scene.clearScreen()
 
                         self.scene.displaybattle(self.enemy,self.player)
 
@@ -76,14 +75,14 @@ class Game:
                         if option == 0:
                             continue
                             
-                        os.system('clear')
+                        self.scene.clearScreen()
 
                         self.scene.displaybattle(self.enemy,self.player)
 
                         self.player.useItem(self.enemy,self.player.inventory[option-1])
                         enemyturn = True
                     else:
-                        os.system('clear')
+                        self.scene.clearScreen()
                         self.scene.displaybattle(self.enemy,self.player)
 
                         print("Your inventory is empty...")
@@ -98,7 +97,7 @@ class Game:
             time.sleep(2.5)
 
         else:
-            os.system('clear')
+            self.scene.clearScreen()
             self.player.inventory.clear()
             self.scene.displaydeath()
             self.menu()
@@ -119,7 +118,7 @@ class Game:
 
         self.player.inventory.append(item)
 
-        os.system('clear')
+        self.scene.clearScreen()
         self.scene.displayfind(item)
         time.sleep(2.5)
         
@@ -129,7 +128,7 @@ class Game:
 
     def menu(self):
 
-        os.system('clear')
+        self.scene.clearScreen()
         #displays menu
         self.scene.displaymenu()
 
