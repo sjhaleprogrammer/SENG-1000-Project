@@ -32,7 +32,7 @@ class Game:
                 return "win"
 
             # clears the screen
-            os.system('cls')        
+            os.system('clear')        
         
             self.scene.displaybattle(self.enemy,self.player)
 
