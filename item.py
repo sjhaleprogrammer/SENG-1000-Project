@@ -1,10 +1,10 @@
 from player import Player
 from enemy import Enemy
-import random
+
 
 class Item:
 
-    def __init__(self,name="",damage=0,player = Player(),enemy = Enemy(),ToEnemy=False,desc=""):
+    def __init__(self,name="",damage=0,ToEnemy=False,desc=""):
         self.name = name
         self.damage = damage
         self.ToEnemy = ToEnemy

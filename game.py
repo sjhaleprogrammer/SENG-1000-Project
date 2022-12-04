@@ -75,7 +75,11 @@ class Game:
                         option = int(input())
                         if option == 0:
                             continue
-                    
+                            
+                        os.system('clear')
+
+                        self.scene.displaybattle(self.enemy,self.player)
+
                         self.player.useItem(self.enemy,self.player.inventory[option-1])
                         enemyturn = True
                     else:
@@ -106,9 +110,9 @@ class Game:
             
     def find(self):
 
-        list = [Item("Damage Potion",random.randint(5,10),self.player,self.enemy,ToEnemy=True,desc="Deals 5 to 10 damage to enemy"),
-                Item("Health Potion",random.randint(5,10),self.player,self.enemy,ToEnemy=False,desc="Heals 5 to 10 damage"),
-                Item("Greater Health Potion",random.randint(10,20),self.player,self.enemy,ToEnemy=False,desc="Heals 10 to 20 damage")
+        list = [Item("Damage Potion",random.randint(5,10),ToEnemy=True,desc="Deals 5 to 10 damage to enemy"),
+                Item("Health Potion",random.randint(5,10),ToEnemy=False,desc="Heals 5 to 10 damage"),
+                Item("Greater Health Potion",random.randint(10,20),ToEnemy=False,desc="Heals 10 to 20 damage")
                 ]
 
         item = random.choice(list)
