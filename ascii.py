@@ -32,4 +32,17 @@ class Ascii:
 
 
     def Goblin():
-            pass
+        print("                  ,        ,        ")
+        print('                /  (.-""-.)  \\     ')
+        print("             |\ \/          \/ /|      ")
+        print("             | \/   =.   .=  \/ |    ")
+        print('              \( \   o\ / o  /) /     ')
+        print("               \_  ,'-/  \-', _/   ")
+        print("                /     \__/     \\   ")
+        print("                \  \__ /\__ /  /     ")
+        print("              ___\  \| -- |/  / ___   ")
+        print("             / `  \          / `    \\  ")
+        print("            /        '----'          \\  ")
+
+
+    

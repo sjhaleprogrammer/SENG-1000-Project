@@ -32,6 +32,8 @@ class Scene:
             Ascii.Spider()
         elif("Skeleton" in enemy.currentenemy):
             Ascii.Skeleton()
+        elif("Goblin" in enemy.currentenemy):
+            Ascii.Goblin()
         print('')
         print(f' HP:{player.health}                 ')
         print('')
